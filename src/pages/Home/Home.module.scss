@@ -1,0 +1,71 @@
+@import '../../style/_mixins.scss';
+.shop {
+  display: flex;
+  justify-content: start;
+  padding-top: 30px;
+  .carts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    .card {
+      width: 260px;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background-color: rgb(255, 255, 255);
+      box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 4px;
+      border-radius: 10px;
+      cursor: pointer;
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 4px;
+      }
+      img {
+        width: 100%;
+        height: 85%;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      .infoCart {
+        padding: 10px;
+      }
+      .title {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .technique {
+        margin-right: 10px;
+      }
+
+      .footerCart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .btns {
+        display: flex;
+        align-items: center;
+        .heart,
+        .backet {
+          padding: 7px;
+          display: block;
+          align-items: center;
+          margin: 0 auto;
+          width: 30px;
+          height: 30px;
+          background-color: #dacece;
+          border-radius: 100%;
+          margin-left: 10px;
+          .img {
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

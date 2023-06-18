@@ -1,0 +1,155 @@
+@import '../../style/mixins';
+.header {
+  position: relative;
+  background-color: #f0f0f0;
+}
+
+.container {
+  position: relative;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  z-index: 1;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.title {
+  display: inline-block;
+  align-items: center;
+  margin-right: 20px;
+  font-weight: bold;
+  color: $primary-color;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.button {
+  width: 80px;
+  height: 60px;
+  font-weight: bold;
+  margin-left: 20px;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0;
+}
+
+.infoContainer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  min-height: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+.infoBlock {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-self: flex-start;
+}
+
+.firstTr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0;
+}
+
+.info {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.columnList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0;
+}
+
+.columnList li {
+  margin-bottom: 15px;
+  font-weight: normal;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.5);
+    color: gray;
+  }
+}
+.navPaintist {
+  display: flex;
+  justify-content: space-around;
+}
+.rigth {
+  display: flex;
+  align-items: center;
+  strong {
+    margin: 0px 10px 0px 10px;
+  }
+  .input {
+    display: flex;
+    justify-content: start;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-right: 10px;
+    .icon {
+      width: 30px;
+      padding: 10px 0 10px 10px;
+      cursor: pointer;
+    }
+    input {
+      width: 220px;
+      height: 33px;
+      padding: 20px 10px 20px 10px;
+    }
+  }
+  .buttons {
+    margin-right: 15px;
+    button {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .heart {
+    width: 30px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  .basket {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: $primary-color;
+      color: white;
+      border-radius: 50%;
+      padding: 4px;
+      font-size: 12px;
+    }
+    .icon {
+      color: black;
+      font-size: 24px;
+    }
+  }
+}
